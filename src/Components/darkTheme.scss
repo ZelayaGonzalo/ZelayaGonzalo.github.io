@@ -1,0 +1,257 @@
+$blue:#14213D;
+$grey:#E5E5E5;
+$red2:#A53F2B;
+$red:#CF6766;
+$font:#E5E5E5;
+$celeste:#6E8894;
+$ink:#062f4f;
+
+
+$ultramarine:#031424;
+$indigo:#30415D;
+.darkBackground{
+    background-color: $indigo;
+    color:white;
+    min-height: 100vh;
+}
+.nav-container-dark{
+    background-color: $ultramarine;
+    color: $grey;
+    .select-mode{
+        i:hover{
+            color: $red;
+        }
+    }
+    .select-language{
+        li{
+            font-weight: bold;
+            border: 2px solid $grey;
+            &:hover{
+                color: $ultramarine;
+                background:white;
+                -webkit-box-shadow: 0px 10px 13px -7px #000000, 0px 0px 15px 5px rgba(0,0,0,0); 
+                box-shadow: 0px 10px 13px -7px #000000, 0px 0px 15px 5px rgba(0,0,0,0);
+                }
+            }
+            .selected{
+                background: $red;
+                color:white;
+            }
+    }
+    .social-links{
+        i{
+            color: $grey;
+            transition: 0.3s;
+            
+        }
+        i:hover{
+            color: $red;
+            cursor: pointer;
+        }
+    }
+    .nav-links{
+        color: $font;
+        li{
+            border-top: 1px solid $grey;
+            border-bottom: 1px solid $grey;
+            &:before{
+                background-image: linear-gradient(90deg, rgba(255,255,255,0) 0%, white 20%, white 80%, rgba(255,255,255,0) 100%);
+            }
+            &:hover{
+                height: 60px;
+                z-index: 999;
+                -webkit-box-shadow: 0px 10px 13px -7px #000000, 0px 0px 20px 5px rgba(0,0,0,0); 
+                box-shadow: 0px 10px 13px -7px #000000, 0px 0px 20px 5px rgba(0,0,0,0);
+                &:before{
+                    opacity:1;
+                    
+                }
+                .nav-text{
+                    color: $ultramarine;
+                }
+            }
+        }
+        .nav-text{
+            color: $grey;
+        }
+        .selected{
+            .nav-text{
+                color:white;
+            }
+            &:before{
+                opacity: 1;
+                transition: 0.4s;
+                z-index: -100;
+                content: '';    
+                display: block;
+                height: 100%;
+                position: absolute;
+                top: 0; left: 0;
+                width: 100%;
+                background-image: linear-gradient(90deg, rgba(255,255,255,0) 0%, $red 20%, $red 80%, rgba(255,255,255,0) 100%);
+            }
+        }
+    }
+}
+
+.nav-container-mobile-dark{
+    background-color: $ultramarine;
+    color: $font;
+    border-bottom: 2px solid $font;
+    .nav-mobile-links{
+        .nav-link{
+            border-left: 2px solid $font;
+            &:active{
+                background-color: white;
+                color: $ultramarine;
+            }
+            .nav-text{
+                color: $font;
+            }
+        }
+        .selected{
+            background-color: $red;
+            color: white;
+            .nav-text{
+                color: white;
+            }
+        }
+        .cog{
+            &:hover{
+                .fa-cog{
+                    color: $red;
+                }
+        }
+    }
+    }
+    .nav-hidden{
+        background-color: $ultramarine;
+        color: $font;
+        .select-language{
+            li{
+                border: 2px solid $font;
+                &:active{
+                    background: white;
+                    color: $ultramarine;
+                }
+            }
+            .selected{
+                background: $red;
+                color: white;
+            }
+    }   }
+    .nav-social{
+        i{
+            color: $font;
+        }
+        i:active{
+            color: $red;
+        }
+    }
+}
+
+.portfolio-container{
+    .projects-nav-dark{
+        background-color: $ultramarine;
+        color: $font;
+        li{
+            border-left: 2px solid $font;
+            &:first-child{
+                border-left: none;
+            }
+            &:hover{
+                font-weight: bold;
+                background-color: $grey;
+                color: $ultramarine;
+            }
+        }
+        .selected{
+            background-color: $red;
+            color: white;
+            font-weight: bold;
+        }
+    }
+}
+
+.project-box-dark{
+    color: $font;
+    .project-title{
+        text-shadow: 1px 0px 1px #031424, 0px 1px 1px #062f4f, 2px 1px 1px #031424, 1px 2px 1px #062f4f, 3px 2px 1px #031424, 2px 3px 1px #062f4f, 4px 3px 1px #031424, 3px 4px 1px #062f4f, 5px 4px 1px #031424, 4px 5px 1px #062f4f, 6px 5px 1px #031424, 5px 6px 1px #062f4f, 7px 6px 1px #031424;
+    }
+    .img-container{
+        background-color: $ultramarine;
+    }
+    .portfolio-stack{
+        span{
+            border: 1px solid white;
+            background-color: $grey;
+            color:$font;
+        }
+        svg{
+            color: $red;
+        }
+    }
+    .portfolio-buttons{
+        a{
+            border: 2px solid $grey;
+            color: $font;
+            &:hover{
+                background-color: $red;
+            }
+        }
+    }
+}
+
+.aboutMe-container .form-container-dark{
+        background-color: $ultramarine;
+        color: $font;
+        input[type=text],input[type=email]{
+            color: $font;
+            border-bottom: 2px solid $font;
+        }
+        .submit-btn{
+            border: 2px solid $font;
+            background-color: $ultramarine;
+            color: $font;
+            &:hover{
+                background-color: $red;
+                color: white;
+            }
+        }
+        .contact-form{
+            .msg-label{
+                .text-area{
+                    border: 2px solid $font;
+                    color: $ultramarine;
+                }
+            }
+            .message-sent{
+                color: $red;
+            }
+    }
+
+}
+
+.aboutMe-container .other-contacts-dark{
+    .contact-items{
+        li{
+            color: $red;
+        }
+        .text{
+            color: $font;
+        }
+    }
+}
+.aboutMe-container .info-container-dark{
+    color: $font;
+    .stacks{
+        .icon{
+            color: $red;
+        }
+    }
+    .go-to-info{
+        a{
+            color: $red;
+        }
+    }
+}
